@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,12 @@ export default function RootLayout({
     <html lang="jp">
       <body className={inter.className}>
         <main className="flex min-h-screen flex-col items-center pt-24">
-          <h1 className="text-4xl font-bold">Next.js Routing Demo</h1>
+          <div className="flex flex-col-reverse">
+            <h1 className="text-4xl font-bold">Next.js Routing Demo</h1>
+            <Link href="/" className="text-blue-600 text-left">
+              ←/app/page.tsx
+            </Link>
+          </div>
           {children}
         </main>
       </body>
